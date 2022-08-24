@@ -17,19 +17,22 @@ struct CartesianCoord
 		this->y = y;
 	}
 
-	float calculateDistance(float x1, float y1, float x2, float y2)
-	{
-		float distance = sqrt((pow(x2 - x1, 2)) + (pow(y2 - y1, 2)));
-		return distance;
-	}
+	
 };
+
+float calculateDistance(CartesianCoord c1, CartesianCoord c2)
+{
+	float distanceSquared = sqrt((pow(c1.x - c2.x, 2)) + (pow(c1.y - c2.y, 2)));
+	return distanceSquared;
+}
+
 
 
 int main()
 {
 
 	CartesianCoord c1(0, 0), c2(4, 3);
-	cout << "The distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << c1.calculateDistance(c1.x, c1.y, c2.x, c2.y);
+	cout << "The distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateDistance(c1, c2);
 
 
 
