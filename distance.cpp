@@ -26,13 +26,19 @@ float calculateDistance(CartesianCoord c1, CartesianCoord c2)
 	return distanceSquared;
 }
 
+int calculateChebyshevDistance(CartesianCoord c1, CartesianCoord c2)
+{
+	return max(abs(c1.x - c2.x), abs(c1.y - c2.y));
+}
+
 
 
 int main()
 {
 
 	CartesianCoord c1(0, 0), c2(4, 3);
-	cout << "The distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateDistance(c1, c2);
+	cout << "The Euclidean distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateDistance(c1, c2) << endl;
+	cout << "The Chebyshev distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateChebyshevDistance(c1, c2);
 
 
 
