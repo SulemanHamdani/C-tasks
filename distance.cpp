@@ -22,8 +22,7 @@ struct CartesianCoord
 
 float calculateDistance(CartesianCoord c1, CartesianCoord c2)
 {
-	float distanceSquared = sqrt((pow(c1.x - c2.x, 2)) + (pow(c1.y - c2.y, 2)));
-	return distanceSquared;
+	return sqrt((pow(c1.x - c2.x, 2)) + (pow(c1.y - c2.y, 2)));
 }
 
 int calculateChebyshevDistance(CartesianCoord c1, CartesianCoord c2)
