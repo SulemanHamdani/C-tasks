@@ -49,6 +49,8 @@ int main()
 	cout << "The Chebyshev distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateChebyshevDistance(c1, c2) << endl;
 	cout << "The Chebyshev distance between ( " << c1.x << ", " << c1.y << " ) , ( " << c2.x << ", " << c2.y << " ) is: " << calculateMinkowskiDistance(c1, c2, 2.0) << endl;
 	cout << pow(16, -2);
+	
+	 University at Buffalo SUNY - School of Engineering and Applied Sciences
 
 	/*float x1, x2, y1, y2;
 	cout << "Enter the first pair of co-ordinates: ";
